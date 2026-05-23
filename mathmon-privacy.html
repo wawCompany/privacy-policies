@@ -1,29 +1,360 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head><meta charset="UTF-8"><title>매스몬 개인정보처리방침</title></head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>매스몬(Mathmon) 개인정보처리방침</title>
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --border: #e5e7eb;
+      --section-bg: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        Arial,
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 48px 44px 36px;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(37, 99, 235, 0.02)),
+        #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.3;
+      letter-spacing: -0.04em;
+      color: #111827;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .meta-item {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #ffffff;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 36px 44px 44px;
+    }
+
+    .summary {
+      margin-bottom: 32px;
+      padding: 20px 22px;
+      border-radius: 16px;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+    }
+
+    .summary-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .summary p {
+      margin: 0;
+      color: #4b5563;
+    }
+
+    section {
+      padding: 26px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      color: #111827;
+    }
+
+    .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 8px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: #374151;
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      background: #f8fbff;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact-box a {
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 22px 44px;
+      border-top: 1px solid var(--border);
+      background: #f9fafb;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 14px 40px;
+      }
+
+      .hero {
+        padding: 34px 24px 28px;
+      }
+
+      .content {
+        padding: 28px 24px 34px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      footer {
+        padding: 20px 24px;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<h1>매스몬 (Mathmon) 개인정보처리방침</h1>
-<p>최종 수정일: 2026년 5월 23일</p>
+  <main class="page">
+    <article class="policy-card">
+      <header class="hero">
+        <div class="badge">Privacy Policy</div>
+        <h1>매스몬(Mathmon) 개인정보처리방침</h1>
+        <p class="subtitle">
+          매스몬은 아동 사용자를 포함한 모든 사용자의 개인정보 보호를 중요하게 생각합니다.
+        </p>
 
-<h2>1. 수집하는 개인정보</h2>
-<p>매스몬은 사용자의 개인정보를 수집하지 않습니다. 회원가입, 로그인, 결제 기능이 없으며, 어떠한 개인 식별 정보도 요구하지 않습니다.</p>
+        <div class="meta">
+          <div class="meta-item">최종 수정일: 2026년 5월 23일</div>
+          <div class="meta-item">적용 앱: 매스몬(Mathmon)</div>
+        </div>
+      </header>
 
-<h2>2. 데이터 저장</h2>
-<p>학습 기록과 게임 진행 데이터는 사용자의 기기에만 로컬로 저장되며, 외부 서버로 전송되지 않습니다.</p>
+      <div class="content">
+        <div class="summary">
+          <h2 class="summary-title">개요</h2>
+          <p>
+            매스몬은 회원가입, 로그인, 결제, 광고 기능을 제공하지 않으며,
+            사용자를 직접 식별할 수 있는 개인정보를 수집하지 않습니다.
+            학습 기록 및 게임 진행 데이터는 사용자의 기기에만 저장됩니다.
+          </p>
+        </div>
 
-<h2>3. 제3자 제공</h2>
-<p>수집하는 정보가 없으므로 제3자에게 제공하는 정보도 없습니다.</p>
+        <section>
+          <h2><span class="number">1</span>수집하는 개인정보</h2>
+          <p>
+            매스몬은 사용자의 개인정보를 수집하지 않습니다.
+            회원가입, 로그인, 결제 기능이 없으며, 이름, 이메일 주소, 전화번호,
+            위치정보 등 개인을 식별할 수 있는 정보를 요구하지 않습니다.
+          </p>
+        </section>
 
-<h2>4. 아동 개인정보 보호</h2>
-<p>매스몬은 4세~10세 아동을 대상으로 하며, 아동의 개인정보를 수집, 사용, 공개하지 않습니다. COPPA(아동 온라인 개인정보 보호법) 및 관련 법규를 준수합니다.</p>
+        <section>
+          <h2><span class="number">2</span>데이터 저장</h2>
+          <p>
+            학습 기록과 게임 진행 데이터는 사용자의 기기에만 로컬로 저장되며,
+            외부 서버로 전송되거나 별도로 수집되지 않습니다.
+          </p>
+        </section>
 
-<h2>5. 광고 및 결제</h2>
-<p>매스몬에는 광고가 포함되어 있지 않으며, 인앱 결제 기능이 없습니다.</p>
+        <section>
+          <h2><span class="number">3</span>제3자 제공</h2>
+          <p>
+            매스몬은 수집하는 개인정보가 없으므로 제3자에게 제공하거나 공유하는
+            개인정보도 없습니다.
+          </p>
+        </section>
 
-<h2>6. 인터넷 사용</h2>
-<p>앱은 폰트 다운로드 목적으로 인터넷에 접속할 수 있으나, 사용자 데이터를 전송하지 않습니다. 인터넷 연결 없이도 모든 기능을 사용할 수 있습니다.</p>
+        <section>
+          <h2><span class="number">4</span>아동 개인정보 보호</h2>
+          <p>
+            매스몬은 4세부터 10세까지의 아동을 주요 대상으로 하는 앱입니다.
+            앱은 아동의 개인정보를 수집, 사용, 공개하지 않으며,
+            COPPA(아동 온라인 개인정보 보호법) 및 관련 개인정보 보호 법규를 준수하기 위해 노력합니다.
+          </p>
+          <div class="notice">
+            보호자 또는 법정대리인이 개인정보 처리와 관련하여 문의할 사항이 있는 경우,
+            아래 문의처로 연락할 수 있습니다.
+          </div>
+        </section>
 
-<h2>7. 문의</h2>
-<p>개인정보처리방침에 대한 문의: ascendly.apex@gmail.com</p>
+        <section>
+          <h2><span class="number">5</span>광고 및 결제</h2>
+          <p>
+            매스몬에는 광고가 포함되어 있지 않으며, 인앱 결제 기능도 제공하지 않습니다.
+            따라서 광고 식별자 또는 결제 관련 개인정보를 수집하지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2><span class="number">6</span>인터넷 사용</h2>
+          <p>
+            앱은 폰트 다운로드 등 앱 기능 제공에 필요한 제한적인 목적으로 인터넷에 접속할 수 있습니다.
+            이 과정에서 사용자 개인정보나 학습 데이터는 외부 서버로 전송되지 않습니다.
+            또한 인터넷 연결 없이도 앱의 주요 기능을 사용할 수 있습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2><span class="number">7</span>개인정보처리방침의 변경</h2>
+          <p>
+            본 개인정보처리방침은 관련 법령, 앱 기능 또는 운영 정책의 변경에 따라 수정될 수 있습니다.
+            변경 사항이 있는 경우 본 페이지를 통해 안내합니다.
+          </p>
+        </section>
+
+        <section>
+          <h2><span class="number">8</span>문의</h2>
+          <p>
+            개인정보처리방침에 대한 문의는 아래 이메일로 연락해 주시기 바랍니다.
+          </p>
+
+          <div class="contact-box">
+            <div class="contact-label">문의 이메일</div>
+            <a href="mailto:ascendly.apex@gmail.com">ascendly.apex@gmail.com</a>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        © 2026 Mathmon. All rights reserved.
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
